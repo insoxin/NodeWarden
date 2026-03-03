@@ -1,0 +1,638 @@
+# Instincts generated from https://github.com/insoxin/NodeWarden
+# Generated: 2026-03-03T05:15:37.957Z
+# Version: 2.0
+
+---
+id: NodeWarden-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: feat, fix, chore, docs
+
+## Evidence
+
+- 107 commits analyzed
+- Detected conventional commit pattern
+- Examples: fix: update 2FA support descriptions and improve error handling in TOTP actions, feat: add Import & Export page and update Help page with new navigation
+
+---
+id: NodeWarden-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Commit Length
+
+## Action
+
+Write moderate-length commit messages (~50 characters)
+
+## Evidence
+
+- Average commit message length: 70 chars
+- Based on 107 commits
+
+---
+id: NodeWarden-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: NodeWarden-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: NodeWarden-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: NodeWarden-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: config, handlers, services, types, utils
+
+---
+id: NodeWarden-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: NodeWarden-workflow-database-migration
+trigger: "when modifying the database schema or adding tables"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Workflow Database Migration
+
+## Action
+
+Follow the database-migration workflow:
+1. Create migration file
+2. Update schema definitions
+3. Generate/update types
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: migrations/*, **/types.ts
+
+---
+id: NodeWarden-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~20x per month
+- Files: src/handlers/*, src/*, src/services/*
+
+---
+id: NodeWarden-workflow-identity-handler-fixes
+trigger: "when doing identity handler fixes"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Workflow Identity Handler Fixes
+
+## Action
+
+Follow the identity-handler-fixes workflow:
+1. Identify issue in identity.ts
+2. Apply fix to handler
+3. Test compatibility
+4. Handle merge conflicts if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: src/handlers/identity.ts
+
+---
+id: NodeWarden-workflow-readme-documentation-updates
+trigger: "when doing readme documentation updates"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Workflow Readme Documentation Updates
+
+## Action
+
+Follow the readme-documentation-updates workflow:
+1. Update README.md
+2. Update README_EN.md for English version
+3. Sync content between versions
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: README.md, README_EN.md
+
+---
+id: NodeWarden-workflow-webapp-ui-enhancement
+trigger: "when doing webapp ui enhancement"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Workflow Webapp Ui Enhancement
+
+## Action
+
+Follow the webapp-ui-enhancement workflow:
+1. Update App.tsx routing/layout
+2. Modify specific page components
+3. Update styles.css
+4. Add i18n translations if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~6x per month
+- Files: webapp/src/App.tsx, webapp/src/components/*.tsx, webapp/src/styles.css
+
+---
+id: NodeWarden-workflow-web-client-development
+trigger: "when doing web client development"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Workflow Web Client Development
+
+## Action
+
+Follow the web-client-development workflow:
+1. Update web handler
+2. Modify client scripts
+3. Update styles
+4. Test interface
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: src/handlers/web.ts, public/web/*.js, public/web/styles.css
+
+---
+id: NodeWarden-workflow-router-handler-updates
+trigger: "when doing router handler updates"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Workflow Router Handler Updates
+
+## Action
+
+Follow the router-handler-updates workflow:
+1. Update router.ts with new routes
+2. Modify relevant handler files
+3. Update configuration/limits if needed
+4. Test API endpoints
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: src/router.ts, src/handlers/*.ts, src/config/limits.ts
+
+---
+id: NodeWarden-workflow-package-dependency-updates
+trigger: "when doing package dependency updates"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/insoxin/NodeWarden
+---
+
+# NodeWarden Workflow Package Dependency Updates
+
+## Action
+
+Follow the package-dependency-updates workflow:
+1. Update package.json
+2. Regenerate package-lock.json
+3. Test build process
+4. Update related configs if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: package.json, package-lock.json
+
+---
+id: nodewarden-conventional-commits
+trigger: "When making a commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Conventional Commits
+
+## Action
+
+Use conventional commit format with prefixes: feat, fix, chore, docs, style
+
+## Evidence
+
+- All 8 example commits follow conventional format
+- Consistent use of feat:, fix:, chore:, docs: prefixes
+
+---
+id: nodewarden-camelcase-files
+trigger: "When creating a new file"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Camelcase Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Files like identity.ts, accounts.ts follow camelCase
+- Naming conventions analysis shows camelCase for files
+
+---
+id: nodewarden-pascalcase-classes
+trigger: "When defining a class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Pascalcase Classes
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Naming conventions analysis specifies PascalCase for classes
+
+---
+id: nodewarden-screaming-snake-constants
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Screaming Snake Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE naming convention
+
+## Evidence
+
+- Naming conventions analysis specifies SCREAMING_SNAKE_CASE for constants
+
+---
+id: nodewarden-relative-imports
+trigger: "When importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Relative Imports
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Code style analysis shows relative import style
+
+---
+id: nodewarden-named-exports
+trigger: "When exporting from a module"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Named Exports
+
+## Action
+
+Use named exports instead of default exports
+
+## Evidence
+
+- Code style analysis shows named export style
+
+---
+id: nodewarden-try-catch-errors
+trigger: "When handling potential errors"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Try Catch Errors
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- Error handling style is try-catch based
+- No custom error classes or global handlers detected
+
+---
+id: nodewarden-type-based-organization
+trigger: "When organizing code modules"
+confidence: 0.9
+domain: architecture
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Type Based Organization
+
+## Action
+
+Group files by type (handlers, services, types, utils, config)
+
+## Evidence
+
+- Folder structure shows type-based organization
+- Clear separation: handlers/, services/, types/, utils/, config/
+
+---
+id: nodewarden-auth-handler-priority
+trigger: "When fixing authentication issues"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Auth Handler Priority
+
+## Action
+
+Focus on src/handlers/identity.ts file first
+
+## Evidence
+
+- Identity handler fixes workflow has highest confidence
+- 5x monthly frequency for identity.ts fixes
+
+---
+id: nodewarden-bilingual-docs
+trigger: "When updating documentation"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Bilingual Docs
+
+## Action
+
+Update both README.md and README_EN.md files
+
+## Evidence
+
+- Documentation workflow shows both files updated together
+- 4x monthly documentation updates
+
+---
+id: nodewarden-ui-component-styling
+trigger: "When enhancing UI components"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Ui Component Styling
+
+## Action
+
+Update App.tsx, component files, and styles.css together
+
+## Evidence
+
+- UI enhancement workflow shows coordinated updates
+- 6x monthly UI improvements with these file patterns
+
+---
+id: nodewarden-router-handler-coordination
+trigger: "When adding new API endpoints"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Router Handler Coordination
+
+## Action
+
+Update router.ts and corresponding handler files together
+
+## Evidence
+
+- Router updates workflow shows coordinated changes
+- 3x monthly router and handler updates
+
+---
+id: nodewarden-web-client-sync
+trigger: "When updating web client functionality"
+confidence: 0.82
+domain: workflow
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Web Client Sync
+
+## Action
+
+Update web handler, client scripts, and styles together
+
+## Evidence
+
+- Web client development workflow shows coordinated updates
+- 4x monthly web client updates
+
+---
+id: nodewarden-migration-types-sync
+trigger: "When making database schema changes"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Migration Types Sync
+
+## Action
+
+Create migration file and update type definitions together
+
+## Evidence
+
+- Database migration workflow shows migration files and types updated together
+- Files involved: migrations/*, **/types.ts
+
+---
+id: nodewarden-dependency-lockfile-sync
+trigger: "When updating dependencies"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: insoxin/NodeWarden
+---
+
+# Nodewarden Dependency Lockfile Sync
+
+## Action
+
+Update package.json and regenerate package-lock.json
+
+## Evidence
+
+- Package dependency workflow shows both files updated
+- 2x monthly dependency updates
+
