@@ -12,7 +12,7 @@ export default function StandalonePageFrame(props: StandalonePageFrameProps) {
       <div className="standalone-brand standalone-brand-outside">
         <img src="/logo-64.png" alt="NodeWarden logo" className="standalone-brand-logo" />
         <div>
-          <div className="standalone-brand-title">NodeWarden</div>
+          <div className="standalone-brand-title">BitWarden</div>
         </div>
       </div>
 
